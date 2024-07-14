@@ -1,0 +1,190 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+input {
+  border-radius: 8px;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-family: inherit;
+  background-color: #1a1a1a; /* Dark background for contrast */
+  color: #fff; /* White text color for better readability */
+  border: 1px solid transparent; /* Remove default border */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  transition: background-color 0.25s, box-shadow 0.25s; /* Smooth transition for background and shadow */
+  background: linear-gradient(45deg, #0f0f0f, #222); /* Subtle gradient background */
+  position: relative; /* Needed for pseudo-elements */
+  text-align: center;
+}
+
+input::after {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  z-index: -1;
+  background: linear-gradient(45deg, #ff00cc, #333399);
+  border-radius: 8px;
+  filter: blur(5px);
+}
+
+input:focus {
+  outline: none;
+  background: linear-gradient(45deg, #333399, #ff00cc);
+  box-shadow: 0 0 8px #ff00cc, 0 0 16px #333399, 0 0 24px #ff00cc;
+}
+
+input:hover {
+  background: linear-gradient(45deg, #222, #0f0f0f);
+  box-shadow: 0 0 8px #ff00cc, 0 0 16px #333399;
+}
+
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+.button-cyberpunk {
+  background: linear-gradient(45deg, #ff00cc, #333399);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-family: 'Orbitron', sans-serif; /* Consider using a futuristic font */
+  font-size: 16px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  outline: none;
+  position: relative;
+  box-shadow: 0 0 10px #ff00cc, 0 0 20px #333399, 0 0 40px #333399, 0 0 80px #ff00cc;
+  transition: all 0.3s ease;
+}
+
+.button-cyberpunk::after {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  z-index: -1;
+  background: linear-gradient(45deg, #ff00cc, #333399);
+  border-radius: 5px;
+  filter: blur(5px);
+}
+
+.button-cyberpunk:hover {
+  box-shadow: 0 0 10px #ff00cc, 0 0 20px #ff00cc, 0 0 40px #ff00cc, 0 0 80px #ff00cc, 0 0 160px #ff00cc;
+}
+
+.button-cyberpunk:active {
+  background: linear-gradient(45deg, #333399, #ff00cc);
+}
+
+.container {
+  margin: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  text-align: center;
+  flex: 1;
+}
+
+div.container > * {
+  margin: 20px;
+}
+
+footer {
+  margin-top: 50px;
+  text-align: center;
+}
+
+header {
+  background-color: #333; /* Dark background for the header */
+  color: #fff; /* White text color */
+  padding: 1em 0; /* Padding around the header */
+  text-align: center; /* Center the header content */
+}
+
+nav ul {
+  list-style: none; /* Remove default list styling */
+  padding: 0; /* Remove default padding */
+  margin: 0; /* Remove default margin */
+  display: flex; /* Display the list items inline */
+  justify-content: center; /* Center the list items */
+}
+
+nav ul li {
+  margin: 0 1em; /* Margin between list items */
+}
+
+nav ul li a {
+  color: #fff; /* White text color for links */
+  text-decoration: none; /* Remove underline from links */
+  transition: color 0.25s; /* Smooth transition for link color */
+}
+
+nav ul li a:hover {
+  color: #ff00cc; /* Change color on hover */
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
