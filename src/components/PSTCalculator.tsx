@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
+import { homePageContent } from '../constants';
+import { useLanguage } from '../contexts/LanguageContext';
 
 const PerfectSquareTrinomialCalculator: React.FC = () => {
+  const { language } = useLanguage();
+  const { pageTitle, resultLabel, pageDescription, inputLabels, calculateButton } = homePageContent as any;
   const [a, setA] = useState<string>('');
   const [b, setB] = useState<string>('');
   const [result, setResult] = useState<string>('a x^2 + 2a x + b^2');
@@ -21,21 +25,21 @@ const PerfectSquareTrinomialCalculator: React.FC = () => {
 
   return (
     <div className='container'>
-      <h2>Perfect Square Trinomial Calculator</h2>
+      <h2>{pageDescription[language]}</h2>
       <input
         type="number"
         value={a}
         onChange={(e) => setA(e.target.value)}
-        placeholder="Enter value for a"
+        placeholder={inputLabels[language].a}
       />
       <input
         type="number"
         value={b}
         onChange={(e) => setB(e.target.value)}
-        placeholder="Enter value for b"
+        placeholder={inputLabels[language].b}
       />
-      <button className='button-cyberpunk' onClick={handleCalculate}>Calculate</button>
-      {result && <p>Result: {result}</p>}
+      <button className='button-cyberpunk' onClick={handleCalculate}>{calculateButton[language]}</button>
+      {result && <p>{resultLabel[language]}: {result}</p>}
     </div>
   );
 };

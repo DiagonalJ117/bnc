@@ -138,6 +138,10 @@ button:focus-visible {
   flex: 1;
 }
 
+.why-page.container { 
+  align-items: center;
+}
+
 div.container > * {
   margin: 20px;
 }
@@ -152,6 +156,13 @@ header {
   color: #fff; /* White text color */
   padding: 1em 0; /* Padding around the header */
   text-align: center; /* Center the header content */
+}
+
+nav {
+  display: flex; /* Display the navigation inline */
+  justify-content: center; /* Center the navigation */
+  align-items: center; /* Align the navigation items vertically */
+  padding: 0 1em; /* Padding around the navigation */
 }
 
 nav ul {
@@ -174,6 +185,16 @@ nav ul li a {
 
 nav ul li a:hover {
   color: #ff00cc; /* Change color on hover */
+}
+
+.header-pre {
+  flex: 1;
+}
+
+.header-end {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
 }
 
 @media (prefers-color-scheme: light) {

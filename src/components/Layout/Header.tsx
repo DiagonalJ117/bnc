@@ -1,13 +1,24 @@
 import React from 'react'
+import { useLanguage } from '../../contexts/LanguageContext'
+import { homePageContent, whyPageContent } from '../../constants';
 
 const Header = () => {
+  const { language, setLanguage } = useLanguage();
+  const { pageTitle: homePageTitle } = homePageContent as any;
+  const { pageTitle: whyPageTitle } = whyPageContent as any;
   return (
     <header>
       <nav>
-        <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="/why">Why?</a></li>
-        </ul>
+        <span className='header-pre' />
+        <span className='header-main'>
+          <ul>
+            <li><a href="/">{homePageTitle[language]}</a></li>
+            <li><a href="/why">{whyPageTitle[language]}</a></li>
+          </ul>
+        </span>
+        <span className='header-end'>
+          <button onClick={() => setLanguage(language === 'en' ? 'es' : 'en')}>{language}</button>
+        </span>
       </nav>
     </header>
   )

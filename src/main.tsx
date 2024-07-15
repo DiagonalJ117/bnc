@@ -1,5 +1,11 @@
 import { render } from 'preact'
 import { App } from './app.tsx'
 import './index.css'
+import { LanguageProvider } from './contexts/LanguageContext.tsx'
 
-render(<App />, document.getElementById('app')!)
+render(
+  <LanguageProvider>
+    <App />
+  </LanguageProvider>,
+  document.getElementById('app')!
+)
