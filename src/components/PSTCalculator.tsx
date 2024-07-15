@@ -4,7 +4,7 @@ import { useLanguage } from '../contexts/LanguageContext';
 
 const PerfectSquareTrinomialCalculator: React.FC = () => {
   const { language } = useLanguage();
-  const { pageTitle, resultLabel, pageDescription, inputLabels, calculateButton } = homePageContent as any;
+  const { resultLabel, pageDescription, inputLabels, calculateButton } = homePageContent as any;
   const [a, setA] = useState<string>('');
   const [b, setB] = useState<string>('');
   const [result, setResult] = useState<string>('a x^2 + 2a x + b^2');
@@ -29,13 +29,13 @@ const PerfectSquareTrinomialCalculator: React.FC = () => {
       <input
         type="number"
         value={a}
-        onChange={(e) => setA(e.target.value)}
+        onChange={(e: any) => setA(e.target.value)}
         placeholder={inputLabels[language].a}
       />
       <input
         type="number"
         value={b}
-        onChange={(e) => setB(e.target.value)}
+        onChange={(e: any) => setB(e.target.value)}
         placeholder={inputLabels[language].b}
       />
       <button className='button-cyberpunk' onClick={handleCalculate}>{calculateButton[language]}</button>
