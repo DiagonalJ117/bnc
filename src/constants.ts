@@ -28,6 +28,37 @@ const homePageContent = {
   },
 };
 
+const generalFormulaPageContent = {
+  pageTitle: {
+    en: "General Formula",
+    es: "Fórmula general",
+  },
+  pageDescription: {
+    en: "Quadratic Equation Solver",
+    es: "Solucionador de ecuaciones cuadráticas",
+  },
+  inputLabels: {
+    en: {
+      a: "Enter the value of a",
+      b: "Enter the value of b",
+      c: "Enter the value of c",
+    },
+    es: {
+      a: "Ingrese el valor de a",
+      b: "Ingrese el valor de b",
+      c: "Ingrese el valor de c",
+    },
+  },
+  resultLabel: {
+    en: "Result",
+    es: "Resultado",
+  },
+  calculateButton: {
+    en: "Calculate",
+    es: "Calcular",
+  },
+};
+
 const whyPageContent = {
   pageTitle: {
     en: "Why?",
@@ -39,4 +70,4 @@ const whyPageContent = {
   },
 };
 
-export { homePageContent, whyPageContent };
+export { homePageContent, whyPageContent, generalFormulaPageContent};
